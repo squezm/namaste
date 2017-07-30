@@ -1,0 +1,50 @@
+.schedule {
+width: 960px;
+background-color: rgba(0, 100, 0, .1);
+}
+h3 {
+  padding-left: 40px;
+  font-family: neoteric;
+  font-weight: lighter;
+  font-size: 150%;
+}
+ul {
+  float: left;
+  max-width: 600px;
+  display: inline;
+  margin-right: 20px;
+}
+li {
+  text-align: center;
+  list-style: none;
+  font-family: 'helvetica';
+  font-weight: light;
+  font-size: 0.8em;
+  padding-bottom: 1em;
+  min-width: 300px;
+}
+li:nth-child(odd){
+  background-color: rgba(0,255,0,0.4);
+}
+li:nth-child(even){
+  background-color: rgba(0,255,0,0.8);
+}
+.col-1 {
+  font-family: neoteric;
+  font-weight: light;
+  font-size: 1.5em;
+}
+.right-col {
+
+}
+.sideimage {
+  max-width: 150px;
+  float: left;
+}
+.sideimg {
+  max-width: inherit;
+}
+.quotes {
+  width: 470px;
+  display: inline-block;
+}

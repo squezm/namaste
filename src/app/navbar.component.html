@@ -1,0 +1,17 @@
+<div class="all">
+  <span class="nav-button" (click)="click()" [hidden]="navigation">+</span>
+  <div class="navigation-panel" [class.into-view]="navigation" [class.hiding]="hiding">
+    <button class="panel-button" (click)="click()" [class.into-view-button]="navigation" [hidden]="hiding">-</button><br />
+    <p class="panelLinks" [class.invisible]="large">
+      <a routerLink="home" routerLinkActive="active" (click)="click()">Home</a>
+      <a routerLink="schedule" routerLinkActive="active" (click)="click()">Classes</a>
+      <a routerLink="gallery" routerLinkActive="active" (click)="click()">Gallery</a>
+      <a routerLink="contact" routerLinkActive="active" (click)="click()">Reach Us</a>
+    </p>
+    <p class="quotable">
+      "I will not be concerned at other men's not knowing me; I will be concerned at my own want of ability." -Confucious <br />
+     "Most of our problems are related to the mind, so we have to work to reduce our destructive emotions." -Dalai Lama <br />
+    </p>
+    <a routerLink="home" class="clean" (click)="click()"><small class="float-right">Tiffany Velasquez Yoga</small></a>
+  </div>
+</div>

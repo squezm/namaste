@@ -1,0 +1,81 @@
+.header {
+  position: fixed;
+  top: 0px;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: green;
+  width: 100%;
+  margin: 0px 0px 1em 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: .5em;
+  box-shadow: 0px 1px 1px;
+}
+.login {
+  font-size: .75em;
+  position: fixed;
+}
+.small-login {
+  font-size: .75em;
+}
+.login-section {
+/*  background-color: rgba(0, 0, 0, 0.9);
+  color: green;
+  font-size: .75em;
+  width: 300px;
+  height: 50px;*/
+  margin: auto auto;
+  padding: 3px;
+  left: 45%;
+  top: 2em;
+  position: fixed;
+}
+.white {
+  color: white;
+}
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+.login-content {
+  color: rgb(100,50,225);
+  display: inline;
+}
+.login-content:hover{
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: rgb(100,50,225);
+}
+a:link{
+  color: rgb(100,50,225);
+}
+a:active, a:hover{
+  cursor: pointer;
+  color: white;
+}
+a.active {
+  background-color: rgba(100,50,225,0.5);
+  color: white !important;
+}
+.header-text {
+  color: green !important;
+  float: right;
+  font-weight: light;
+  font-size: 80%;
+  margin-right: 2.5em;
+}
+.numbers {
+  font-family: times;
+}
+.small-header {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+small.login-content {
+  color: green;
+}

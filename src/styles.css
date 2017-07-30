@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'neoteric';
+  src: url('./fonts/NEOTERIC.ttf');
+}
+@font-face {
+  font-family: 'remachine';
+  src: url('./fonts/Remachine.ttf');
+}
+body {
+  background-image: linear-gradient( to bottom right, white, rgba(100,50,225,0.9));
+  background-repeat: no-repeat;
+  font-family: 'neoteric';
+  font-size: 150%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: auto;
+}
+h1 {
+  color: #369;
+  font-family: 'neoteric', Arial, Helvetica, sans-serif;
+  font-size: 200%;
+}
+input, select, button {
+  border-radius: 3px;
+}
+

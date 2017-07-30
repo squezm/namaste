@@ -1,0 +1,56 @@
+<div class="schedule">
+  <h3>Upcoming classes</h3>
+  <div *ngIf="!flows">
+    Loading classes...
+  </div>
+  <ul>
+
+    <li *ngFor="let flow of flows">
+      <div class="col-1" >{{flow.name}}</div>
+      <div>{{flow.days}}</div>
+      <div>{{flow.times}}</div>
+      <div>{{flow.instructor}}</div>
+    </li>
+  </ul>
+  <div class="right-col">
+    <div class="quotes">
+      Om Namo Bagvate.<br /><br />
+      Be strong in body, clean in mind, lofty in ideals.<br /><br />
+      <!--div class="sideimage">
+        <img src="static/images/costa_rican_frog.jpg" alt="classy frog" class="sideimg">
+      </div-->
+      Self-confidence is the foundation of all great success and achievement.<br /><br />
+      You are never too old to set a new goal or dream a new dream.<br /><br />
+      The starting point of all achievement is desire.<br /><br />
+      Do something today that your future self will thank you for.<br /><br />
+      Strive not to be a success, but rather to be value. - Albert Einstein<br /><br />
+      No matter how cool, talented, educated or rich you think you are, how you treat people tells all. Integrity is everything.
+    </div>
+  </div>
+  <!--form #scheduleForm="ngForm" (ngSubmit)="onSubmit()">
+    <h4>Enter a new class:</h4>
+
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" [(ngModel)]="flow.name" name="name" required #name="ngModel">
+    </div>
+
+    <div>
+      <label for="instructor">Instructor</label>
+      <input type="text" id="instructor" [(ngModel)]="flow.instructor" name="instructor" required #instructor="ngModel">
+    </div>
+
+    <div>
+      <label for="days">Days</label>
+      <input type="text" id="days" [(ngModel)]="flow.days" name="days" required #days="ngModel">
+    </div>
+
+    <div>
+      <label for="time">Time</label>
+      <input type="text" id="time" [(ngModel)]="flow.time" name="time" required #time="ngModel">
+    </div>
+
+    <button type="submit" [disabled]="!scheduleForm.form.valid">Submit</button>
+  </form-->
+
+</div>

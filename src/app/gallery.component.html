@@ -1,0 +1,38 @@
+<h3>Memories</h3>
+<div class="wrapper">
+  <div class='gallery'>
+      <img *ngFor="let num of photoRange" src="static/images/image-{{num}}.jpg" class="thumb" (click)="openModal(num)">
+  </div>
+  <div class='modal' [class.open]="open">
+
+    <figure>
+      <img src="static/images/image-{{selectedImageNumber}}.jpg" class="modal-image">
+      <figcaption class="navigation-box">
+        <small class="nav prev" (click)="prevModal()">Previous</small>
+        <span class="nav exit" (click)="closeModal()"><small>Close x</small></span>
+        <small class="nav next" (click)="nextModal(); endSlideshow()">Next</small>
+        <small class="nav numbering">{{selectedImageNumber}} of {{photoRange.length}}</small>
+        <small class="pointer" (click)="toggleSlideshow()">Slideshow:
+          <span [hidden]="!slideshowOn">on</span>
+          <span [hidden]="slideshowOn">off</span>
+        </small>
+      </figcaption>
+    </figure>
+  </div>
+  <span class="slideshow" (click)="openModal(1); toggleSlideshow(); timerBlock()">Play slideshow</span><br />
+
+<!--  <button class="logout" class="logout" (click)="logOut(); loginForm.reset()">Log out</button>
+</div>
+<form #loginForm="ngForm" class="form">
+  <div [hidden]="authenticated">
+    <label for="encrypted">Password</label>
+    <input type="password" [(ngModel)]="viewer.skeleton" required name="encrypted" id="encrypted">
+    <div [hidden]="!message">{{message}}</div>
+    <div [hidden]="!goodbye">{{goodbye}}</div><br />
+    <button type="submit" (click)="onSubmit(viewer.skeleton)">Submit</button>
+    <button type="button" (click)="loginForm.reset(); clearAll()">Reset</button>
+  </div>
+</form>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />process.env.skeleton-->
+</div>

@@ -1,0 +1,12 @@
+p {
+  padding-left: 50px;
+}
+h3{
+  padding-left: 35px;
+  font-family: neoteric;
+  font-weight: lighter;
+  font-size: 150%;
+}
+.wrapper {
+  height: 500px;
+}

@@ -1,0 +1,150 @@
+.all {
+}
+.navigation-panel {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: green;
+  top: 0px;
+  box-shadow: 0px 10px 10px;
+  padding-left: 1px;
+  left: 0%;
+}
+.navbar {
+  visibility: visible !important;
+  height: 80px;
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+.inline {
+  display: inline !important;
+}
+.into-view {
+  visibility: visible;
+  animation-name: slidein;
+  animation-duration: 0.75s;
+}
+.into-view-button {
+  visibility: visible;
+  animation-name: slideinbutton;
+  animation-duration: 0.75s;
+}
+.hiding{
+  animation-name: slideout;
+  animation-duration: 0.75s;
+}
+.nav-button {
+  font-family: arial;
+  text-align: center;
+  top: 10em;
+  left: 2px;
+  float: left;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 2px;
+  color: green;
+  z-index: 1001;
+}
+.nav-button:hover {
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 1px 2px 2px 0px green;
+}
+.panel-button {
+  float: right;
+  right: 5px;
+  color: green;
+  background-color: inherit;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 100%;
+  position: fixed;
+}
+.panel-button:hover {
+  box-shadow: 0px 0px 1px 1px green;
+  cursor: pointer;
+}
+.clean {
+  color: green !important;
+  border-bottom: none;
+}
+a {
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid;
+  border-color: white;
+  padding: 5px;
+  text-align: center;
+  color: rgb(100,50,225);
+}
+a:hover{
+  color: white !important;
+}
+a:link{
+  color: rgb(100,50,225);
+}
+a.active {
+  background-color: rgba(100,50,225,0.5);
+  color: white !important;
+}
+.float-right {
+  float: right;
+  padding-right: .5em;
+}
+
+
+@keyframes slidein {
+ from {
+   margin-left: -100%;
+ }
+25% {
+  background-color: white;
+}
+ to {
+   margin-left:0%;
+ }
+}
+
+@keyframes slideout {
+ from {
+   margin-left: 0%;
+   visibility: visible; /*leave visible for duration of animation */
+ }
+/*25% {
+  background-color: white;
+}*/
+ to {
+   margin-left:-100%;
+ }
+}
+
+/* panel button animation for sliding into view and transition to a fixed button*/
+@keyframes slideinbutton {
+ from {
+   visibility: hidden;
+   margin-left: -100%;
+ }
+25% {
+  background-color: white;
+}
+99%{
+  visibility: hidden;
+}
+ to {
+   margin-left: 0%;
+   visibility: visible;
+ }
+}

@@ -1,0 +1,33 @@
+input {
+  width: 50%;
+}
+.wrapper {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: green;
+  font-size: .75em;
+  width: 300px;
+  height: 50px;
+}
+.inline {
+  display: inline;
+  padding-right: .5em;
+}
+.tiny-button {
+  font-size: .75em;
+  margin: 0px auto;
+}
+.login-button {
+  background-image: url('static/clipart/check-black.png');
+  background-repeat: no-repeat;
+  background-position: 5px;
+}
+.login-button:hover{
+  cursor: pointer;
+}
+.activator:hover{
+  cursor: pointer;
+}
+.username {
+  font-family: georgia;
+  font-size: 85%;
+}

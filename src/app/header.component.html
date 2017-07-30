@@ -1,0 +1,15 @@
+<div class="header">
+  <a routerLink="home" routerLinkActive="active">Home</a> |&nbsp;
+  <a routerLink="schedule" routerLinkActive="active">Classes</a> |&nbsp;
+  <a routerLink="gallery" routerLinkActive="active">Gallery</a> |&nbsp;
+  <a routerLink="contact" routerLinkActive="active">Reach Us</a> |
+  <div (click)="checkpoint ? checkpoint = false : checkpoint = true" class="login-content">Members</div> |
+  <a routerLink="home"><small class="header-text">Tiffany Velasquez Yoga</small></a>
+</div>
+<div class="small-header">
+  <a routerLink="home"><small class="header-text">Tiffany Velasquez Yoga</small></a><br />
+  <small (click)="checkpoint ? checkpoint = false : checkpoint = true" class="login-content">Members</small>
+</div>
+<div class="login-section" [hidden]="!checkpoint">
+  <login-form></login-form>
+</div>

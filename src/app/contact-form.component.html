@@ -1,0 +1,45 @@
+<div [hidden]="submitted">
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" [(ngModel)]="model.name" name="name" required #name="ngModel">
+      <div [hidden]="name.valid || name.pristine">Name is required.</div>
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input type="text" id="email" [(ngModel)]="model.email" name="email" required #email="ngModel">
+      <div [hidden]="email.valid || email.pristine">Email is required.</div>
+    </div>
+
+    <div>
+      <label for="experience">Experience level</label>
+      <select id="experience" [(ngModel)]="model.experience" name="experience" required>
+        <option *ngFor="let level of experience" [value]="level">{{level}}</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="comment">Questions/comments?</label>
+      <input type="textarea" id="comment" [(ngModel)]="model.comment" name="comment" #comment="ngModel" class="textarea">
+    </div>
+
+    <div>
+      <label for="social">Should we add you on facebook?</label>
+      <input type="radio" id="social" [(ngModel)]="model.social" name="social" value="yes" #social="ngModel">Yes
+      <input type="radio" id="social" [(ngModel)]="model.social" name="social" value="no" #social="ngModel">No
+    </div>
+
+    <button type="submit" [disabled]="!contactForm.form.valid">Submit</button>
+    <button type="button" (click)="newContact(); contactForm.reset()">Clear form</button>
+  </form>
+</div>
+<div [hidden]="!submitted" class="thankYou">
+  <h3>Thanks for reaching out {{model.name}}!<br />
+  Look for an email from us at <span class="arial">{{model.email}}</span></h3>
+  Your experience level: {{model.experience}} <br />
+  <span [hidden]="!model.comment">Questions/comments: {{model.comment}}</span><br />
+  <span *ngIf="model.social == 'yes' ">Okay, we will add you on facebook!</span>
+  <span *ngIf="model.social == 'no' ">Fine then, we won't add you on FB!</span><br />
+  <button (click)="edit()">Edit your info</button>
+</div>

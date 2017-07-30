@@ -1,0 +1,17 @@
+<!--button class="activator tiny-button" (click)="!activate ? activate = true : activate = false" [hidden]="activate" [hidden]="loggedIn">Login</button-->
+<div class="wrapper">
+
+  <form class="login" #loginForm="ngForm" (ngSubmit)="onSubmit()" [hidden]="loggedIn">
+    <div class="inline">
+      <label for="username">Username:</label>
+        <input type="text" name="username" id="username" [(ngModel)]="user.username" #username="ngModel" required><br />
+      <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="user.password" name="password" required #password="ngModel">
+    </div>
+    <button class="tiny-button login-button" type="submit">&nbsp;</button>
+    </form>
+
+  <div *ngIf="loggedIn">Welcome back, <span class="username">{{user.username}}!</span></div>
+  <button [hidden]="!loggedIn" class="logout tiny-button" (click)="logOut()">Logout</button>
+
+</div>
